@@ -1,0 +1,103 @@
+// Program to calculate sum of first N natural numbers
+
+#include <stdio.h>
+
+int main()
+{
+    int n, i, sum = 0;
+
+    // Taking input from user
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    // Loop to calculate sum
+    for(i = 1; i <= n; i++)
+    {
+        sum = sum + i;
+    }
+
+    // Display result
+    printf("Sum of first %d natural numbers = %d", n, sum);
+
+    return 0;
+}
+
+
+
+//program to print multiplication table 
+
+#include <stdio.h>
+
+int main() {
+    int num, i;
+
+    // Input the number from user
+    printf("Enter an integer: ");
+    scanf("%d", &num);
+
+    // Loop to print the table from 1 to 10
+    printf("Multiplication Table of %d:\n", num);
+    for (i = 1; i <= 10; i++) {
+        printf("%d * %d = %d\n", num, i, num * i);
+    }
+
+    return 0;
+}
+
+
+
+// Program to find factorial of a number
+
+#include <stdio.h>
+
+int main()
+{
+    int n, i, factorial = 1;
+
+    printf("Enter no. to find factorial of: ");
+    scanf("%d", &n);
+
+    for(i = 1; i <= n; i++)
+    {
+        factorial = factorial * i;
+    }
+
+    printf("Factorial of given no. is: %d", factorial);
+
+    return 0;
+}
+
+
+
+// Program to count digits in a number
+
+#include <stdio.h>
+
+int main()
+{
+    long long n;
+    int count = 0;
+
+    // Taking input from user
+    printf("Enter an integer: ");
+    scanf("%lld", &n);
+
+    // Convert negative number into positive
+    if(n < 0)
+    {
+        n = -n;
+    }
+
+    // Counting digits
+    do
+    {
+        n = n / 10;
+        count++;
+    }
+    while(n != 0);
+
+    // Display result
+    printf("Number of digits: %d\n", count);
+
+    return 0;
+}
