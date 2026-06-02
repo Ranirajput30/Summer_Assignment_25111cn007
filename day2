@@ -1,0 +1,104 @@
+// Program to Find Sum of Digits of a Number
+
+#include <stdio.h>
+
+int main()
+{
+    int num, rem, sum = 0;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    while(num != 0)
+    {
+        rem = num % 10;
+        sum = sum + rem;
+        num = num / 10;
+    }
+
+    printf("Sum of Digits = %d", sum);
+
+    return 0;
+}
+
+
+// Program to Reverse a Number
+
+#include <stdio.h>
+
+int main()
+{
+    int num, reverse = 0, rem;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    while(num != 0)
+    {
+        rem = num % 10;
+        reverse = reverse * 10 + rem;
+        num = num / 10;
+    }
+
+    printf("Reversed Number = %d", reverse);
+
+    return 0;
+}
+
+
+// Program to Find Product of Digits
+
+#include <stdio.h>
+
+int main()
+{
+    int num, rem, product = 1;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    while(num != 0)
+    {
+        rem = num % 10;
+        product = product * rem;
+        num = num / 10;
+    }
+
+    printf("Product of Digits = %d", product);
+
+    return 0;
+}
+
+
+// Program to Check Whether a Number is Palindrome
+
+#include <stdio.h>
+
+int main()
+{
+    int num, temp, rem, reverse = 0;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    temp = num;
+
+    while(num != 0)
+    {
+        rem = num % 10;
+        reverse = reverse * 10 + rem;
+        num = num / 10;
+    }
+
+    if(temp == reverse)
+    {
+        printf("%d is a Palindrome Number", temp);
+    }
+    else
+    {
+        printf("%d is Not a Palindrome Number", temp);
+
+    }
+
+    return 0;
+}
